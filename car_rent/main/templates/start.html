@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Main page </title>
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+</head>
+<body>
+<header>
+    <h1> SuperCars rent website </h1>
+    <h2> List of available SuperCars: </h2>
+        <a href="{% url 'cars_list' %}"> Show car list </a>
+    <h2> Contact form: </h2>
+        <a href="{% url 'contact_form' %}"> Contact me </a>
+    <h2> Message list: </h2>
+        <a href="{% url 'message_list' %}"> Messages </a>
+</header>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+</head>
+<body>
+<ul>
+    {% for car in cars %}
+    <li>
+    {{ car.model }} - {{ car.year }} - {{ car.price }} -
+    {% if car.photo %}
+    <a href="/media/{{car.photo}}"target="_blank"> Photo </a>
+    {% endif %}
+    {% endfor %}
+    </li>
+</ul>
+</body>
+</html>
