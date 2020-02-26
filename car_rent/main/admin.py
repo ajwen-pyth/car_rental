@@ -16,5 +16,7 @@ class CarStockAdmin(admin.ModelAdmin):
 # admin.site.register(MessageStock)
 @admin.register(MessageStock)
 class MessageStockAdmin(admin.ModelAdmin):
-    message_display = ('name', 'surname', 'message_created', 'email', 'message')
+    message_display = ('name', 'surname', 'phone_number', 'email', 'message', 'mess_date')
+    message_filter = ('name', 'surname', 'phone_number', 'email', 'message', 'mess_date')
+    message_fields = ('name', 'surname', 'phone_number', 'email', 'message', 'mess_date')
 

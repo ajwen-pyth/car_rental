@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="{% static 'main.css'%}">
 </head>
 <body>
-<ul>
+<div class="row">
     {% for car in cars %}
-    <li>
-    {{ car.model }} - {{ car.year }} - {{ car.price }} -
-    {% if car.photo %}
-    <a href="/media/{{car.photo}}"target="_blank"> Photo </a>
-    {% endif %}
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{% static 'porshe.jpg'%}">
+          <span class="card-title"> {{car.model}}</span>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
     {% endfor %}
-    </li>
-</ul>
+  </div>
 </body>
 </html>

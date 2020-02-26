@@ -5,16 +5,56 @@
     <meta charset="UTF-8">
     <title> Main page </title>
     <link rel="stylesheet" href="{% static 'main.css'%}">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
-<header>
-    <h1> SuperCars rent website </h1>
-    <h2> List of available SuperCars: </h2>
-        <a href="{% url 'cars_list' %}"> Show car list </a>
-    <h2> Contact form: </h2>
-        <a href="{% url 'contact_form' %}"> Contact me </a>
-    <h2> Message list: </h2>
-        <a href="{% url 'message_list' %}"> Messages </a>
-</header>
-</body>
+<div class="row">
+    <div class="col s8 m12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Rent a SuperCar here with us!</span>
+          <p>SuperCar Rent, brand of AF Group srl, based in Milan, is a company specialised in short-term rentals of luxury cars, sport cars and suv.
+            The company-owned cars include best luxury car brands, equipped with the most exclusive car interiors.
+              They can be picked up and dropped off at our headquarters in Milan, delivered to your hotel or at the airport by our drivers,
+              or at your home in Italy, Switzerland, France and Montecarlo.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">List of available SuperCars</span>
+            <a href="{% url 'cars_list'%}"> Show car list </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"> Contact</span>
+            <a href="{% url 'contact_form'%}"> Contact me via form </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"> Message list </span>
+            <a href="{% url 'message_list'%}"> Messages </a>
+        </div>
+      </div>
+    </div>
+</div>
 </html>
