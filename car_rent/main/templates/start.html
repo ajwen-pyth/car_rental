@@ -1,60 +1,51 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> Main page </title>
-    <link rel="stylesheet" href="{% static 'main.css'%}">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title> UniCars - import and cars rent </title>
 </head>
 <body>
-<div class="row">
-    <div class="col s8 m12">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Rent a SuperCar here with us!</span>
-          <p>SuperCar Rent, brand of AF Group srl, based in Milan, is a company specialised in short-term rentals of luxury cars, sport cars and suv.
-            The company-owned cars include best luxury car brands, equipped with the most exclusive car interiors.
-              They can be picked up and dropped off at our headquarters in Milan, delivered to your hotel or at the airport by our drivers,
-              or at your home in Italy, Switzerland, France and Montecarlo.</p>
-        </div>
-      </div>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col s12 m12">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">List of available SuperCars</span>
-            <a href="{% url 'cars_list'%}"> Show car list </a>
-        </div>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="https://www.facebook.com/UniCars-Import-Aut-z-USA-i-Kanady-208867583168124/" target="_blank">
+    <img src="{% static 'unicar_small.png'%}" width="30" height="30" alt="Unicars_logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"> Import <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'cars_list'%}"> SuperCars list </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact_form'%}"> Contact </a>
+            </li>
+        </ul>
     </div>
-</div>
-
-<div class="row">
-    <div class="col s12 m12">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title"> Contact</span>
-            <a href="{% url 'contact_form'%}"> Contact me via form </a>
-        </div>
-      </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col s12 m12">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title"> Message list </span>
-            <a href="{% url 'message_list'%}"> Messages </a>
-        </div>
-      </div>
-    </div>
-</div>
+</nav>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
 </html>

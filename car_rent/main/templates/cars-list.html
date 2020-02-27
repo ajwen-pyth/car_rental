@@ -8,20 +8,22 @@
 </head>
 <body>
 <div class="row">
-    {% for car in cars %}
+    <h1> {% for car in cars %} </h1>
     <div class="col s12 m7">
       <div class="card">
-        <div class="card-image">
-          <img src="{% static 'porshe.jpg'%}">
           <span class="card-title"> {{car.model}}</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+            <p> <b>Rok produkcji: </b> {{ car.year }} - <b> Pojemność: </b>{{ car.eng_cap }} - <b>Opis:</b>
+                {{ car.description }}
+                    &nbsp;
+                    </br> {% if car.photo %}
+                    <a href="/media/{{ car.photo }}" target="_blank"> Photo </a>
+                    &nbsp;
+                    {% endif %}</p>
         </div>
         <div class="card-action">
         </div>
-      </div>
     </div>
     {% endfor %}
   </div>

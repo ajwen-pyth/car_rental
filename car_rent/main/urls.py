@@ -6,5 +6,6 @@ urlpatterns = [
     path("carslist", carlistpage_response, name="cars_list"),
     path("contact", contactpage_response, name="contact_form"),
     path("messages", messagelist_response, name="message_list"),
-    path("messageadd", messageadd_response, name="message_add")
+    path("messageadd", messageadd_response, name="message_add"),
+    # path("fbpage", fbpage_response, name="fp_page")
     ]

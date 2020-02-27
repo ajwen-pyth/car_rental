@@ -5,8 +5,14 @@ from .forms import *
 
 # Create your views here.
 
+
 def startpage_response(request):
     return render(request, "start.html")
+
+#
+# def fbpage_response(request):
+#     return render(request, )
+
 
 """Available car list"""
 def carlistpage_response(request):
