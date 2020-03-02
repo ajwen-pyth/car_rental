@@ -15,8 +15,9 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://www.facebook.com/UniCars-Import-Aut-z-USA-i-Kanady-208867583168124/" target="_blank">
-    <img src="{% static 'unicar_small.png'%}" width="30" height="30" alt="Unicars_logo">
+    <a class="navbar-brand" href="https://www.facebook.com/UniCars-Import-Aut-z-USA-i-Kanady-208867583168124/"
+       target="_blank">
+        <img src="{% static 'unicar_small.png'%}" width="30" height="30" alt="Unicars_logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +29,7 @@
                 <a class="nav-link" href="#"> Import <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'cars_list'%}"> SuperCars list </a>
+                <a class="nav-link" href="{% url 'cars_list'%}"> Rent a car </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'contact_form'%}"> Contact </a>
@@ -36,6 +37,16 @@
         </ul>
     </div>
 </nav>
+<div class="login_info">
+    {% if user.is_authenticated %}
+    <p> Jesteś zalogowany jako: <b> {{ user.username|upper}} </b> </h1>
+        <a href="{% url 'logout'%}"> Wyloguj się </a>
+        {% else %}
+    <p> Nie jesteś zalogowany! </p>
+    <a href="{% url 'login'%}"> Zaloguj się </a>
+    <a href="{% url 'register'%}"> Zarejestruj się </a>
+    {% endif %}
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -47,5 +58,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+
 </body>
 </html>

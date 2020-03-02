@@ -8,24 +8,22 @@
 </head>
 <body>
 <div class="row">
-    <h1> {% for car in cars %} </h1>
+    <ol> {% for car in cars %} </ol>
     <div class="col s12 m7">
-      <div class="card">
-          <span class="card-title"> {{car.model}}</span>
-        </div>
+        <div class="card">
+            <span class="card-title"><li>{{car.model}}</li> </span>
         <div class="card-content">
-            <p> <b>Rok produkcji: </b> {{ car.year }} - <b> Pojemność: </b>{{ car.eng_cap }} - <b>Opis:</b>
-                {{ car.description }}
-                    &nbsp;
-                    </br> {% if car.photo %}
-                    <a href="/media/{{ car.photo }}" target="_blank"> Photo </a>
-                    &nbsp;
-                    {% endif %}</p>
+            <b>Rok produkcji: </b> {{ car.year }} - <b> Pojemność: </b>{{ car.eng_cap }} - <b>Opis:</b>
+                {{ car.description }} - <b> Cena/dobę </b> {{ car.price }}
+                &nbsp;
+                </br> {% if car.photo %}
+                <a href="/media/{{ car.photo }}" target="_blank"> Zdjęcie </a>
+                {% endif %}
         </div>
         <div class="card-action">
         </div>
     </div>
     {% endfor %}
-  </div>
+</div>
 </body>
 </html>

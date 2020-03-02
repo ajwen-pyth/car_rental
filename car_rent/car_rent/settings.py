@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,11 @@ USE_TZ = False  #zmiana
 STATIC_URL = '/static/'
 MEDIA_ROOT = "main/media_folder"    #zmiana
 MEDIA_URL = "/media/"               #zmiana
+
+#URL's na potrzeby logowania
+LOGIN_URL = "/login"
+LOGIN_REDIRECT_URL = "start_page"
+LOGOUT_REDIRECT_URL = "/logout-done"
+
+#Cripsy template help to registration process
+CRISPY_TEMPLATE_PACK = "bootstrap4"
