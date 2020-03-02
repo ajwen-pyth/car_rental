@@ -3,6 +3,9 @@ from django.http.response import HttpResponse, Http404
 from .models import *
 from .forms import *
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, authenticate
+
 
 # Create your views here.
 
@@ -12,17 +15,16 @@ def startpage_response(request):
 
 
 """Register of user """
-def register_response(response):
-    if response.method == "POST":
-        form = RegisterForm(response.POST)
-        if form.is_valid():
-            form.save()
+def signup_view_response(request):
+    form = UserCreationForm(request.POST)
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password1')
+        user = authenticate(username=username, password=password)
+        login(request, user)
         return redirect("start_page")
-    else:
-        form = RegisterForm()
-
-    return render(response, "register.html", {"form": form})
-
+    return render(request, 'register.html', {"form": form})
 
 """Available car list"""
 @login_required()
