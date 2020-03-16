@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auta naszych klientów</title>
+</head>
+<body>
+<div style="text-align:center">
+    <h2> Oto auta naszych klientów: </h2>
+</div>
+<div class="row">
+    <div class="column">
+        <img src="{% static 'porshe.jpg'%}" alt="Porshe" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'lexus.jpg'%}" alt="Lexus" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'gtr.jpg'%}" alt="AMG GT" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'bmw.jpg'%}" alt="BMW" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'lambo.jpg'%}" alt="Lamborghini" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'bentley.jpg'%}" alt="Bentley" style="width:100%" onclick="myFunction(this);">
+    </div>
+</div>
+
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <!-- naciskajac na (x) zamykasz foto-->
+    <img id="expandedImg" style="width:80%">
+</div>
+<!-- Image onclick -->
+<script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        expandImg.src = imgs.src;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
+
+</body>
+</html>

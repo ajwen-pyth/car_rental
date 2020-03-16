@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About us </title>
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<a href="{% url 'start_page' %}"> Powrót do strony głównej </a>
+<heaader>
+    <div class="nav justify-content-center">
+        <a class="nav-link active"> <img src="{% static 'unicar_big.jpg'%}" width="" height="auto"
+                                         alt="Unicars_logo"></a>
+    </div>
+</heaader>
+<section>
+    <div class="nav justify-content-center">
+        <p> Jesteśmy profesjonalną firmą sprowadzającą auta z USA do Polski. Zajmujemy się także zakupem,
+            sprowadzaniem oraz transportem motocykli, quadów oraz innych pojazdów ze Stanów Zjednoczonych czy Kanady.
+            Początki naszej działalności importowej oraz handlu międzynarodowego sięgają roku 2017.
+            Kilkuletnie doświadczenie w branży potwierdzone jest wieloma udanymi transakcjami. Działamy na podstawie
+            licencji
+            dealera samochodowego, dzięki czemu możemy uczestniczyć w aukcjach samochodowych na terenie USA oraz Kanady
+            dostępnych tylko i wyłącznie dla licencjonowanych nabywców. Specjalizujemy się w imporcie amerykańskich
+            samochodów rozbitych, uszkodzonych, powypadkowych, bezwypadkowych, zabytkowych, sportowych i luksusowych.
+            Importujemy nowe i używane auta amerykańskich marek. Udostępniamy naszym klientom najlepsze oferty
+            pochodzące z największych aukcji samochodowych. </p>
+    </div>
+</section>
+<footer class="contener">
+    <ul> Artur Szymański</ul>
+    <li> ul. Łąki 42</li>
+    <li> 05-870 Błonie</li>
+    <li> tel. +500 500 500</li>
+    <li> Skontaktuj się z <a href="{% url 'message_add'%}"> nami </a></li>
+</footer>
+</body>
+</html>

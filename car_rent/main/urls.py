@@ -6,6 +6,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path("", startpage_response, name="start_page"),
+    path("aboutus", aboutuspage_response, name="about_us"),
     path("carslist", carlistpage_response, name="cars_list"),
     path("contact", contactpage_response, name="contact_form"),
     path("messages", messagelist_response, name="message_list"),
@@ -13,5 +14,6 @@ urlpatterns = [
     path("login", auth_views.LoginView.as_view(), name="login"),
     path("logout", auth_views.LogoutView.as_view(), name="logout"),
     path("register", signup_view_response, name="register"),
+    path("carsgallery", cargallery_response, name="cars_gallery"),
     path("logout-done", logout_done)
     ]

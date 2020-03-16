@@ -1,0 +1,16 @@
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+/*zdjecia szare, dodano pointer*/
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+

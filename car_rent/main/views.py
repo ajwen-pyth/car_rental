@@ -13,6 +13,15 @@ from django.contrib.auth import login, authenticate
 def startpage_response(request):
     return render(request, "start.html")
 
+"""About us"""
+def aboutuspage_response(request):
+    return render(request, "about-us.html")
+
+
+"""Cars gallery"""
+def cargallery_response(request):
+    return render(request, "cars-gallery.html")
+
 
 """Register of user """
 def signup_view_response(request):
@@ -21,6 +30,9 @@ def signup_view_response(request):
         form.save()
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password1')
+        first_name = form.cleaned_data.get('first_name')
+        last_name = form.cleaned_data.get('last_name')
+        email = form.cleaned_data.get('email')
         user = authenticate(username=username, password=password)
         login(request, user)
         return redirect("start_page")
